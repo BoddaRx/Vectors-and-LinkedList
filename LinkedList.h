@@ -10,8 +10,18 @@ struct Node {
 };
 
 class LinkedList
-{    
+{
+private:
+    struct Node* head;
+    struct Node* last;
+    
 public:
+    
+    LinkedList()
+    {
+        head = NULL;
+        last = NULL;
+    }
     
     bool isEmpty(Node* head)
     {
@@ -21,7 +31,7 @@ public:
             return true;
     }
     
-    void insertFirst(struct Node * head, struct Node * last, int number)
+    void insertFirst(int number)
     {
         Node * temp = new Node;
         temp -> data = number;
@@ -33,7 +43,7 @@ public:
     void add_node(struct Node* head, struct Node * last, int n)
     {
         if(isEmpty(head))
-            insertFirst(head, last, n);
+            insertFirst(n);
         else
         {
             Node * temp = new Node;
