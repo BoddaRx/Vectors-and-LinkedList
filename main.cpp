@@ -48,7 +48,7 @@ int main()
     
     LinkedList x;
         
-    x.insertFirst(head, last, 5);
+    x.insertFirst(5);
     
     x.add_node(head, last, 30);
     x.add_node(head, last, 40);
